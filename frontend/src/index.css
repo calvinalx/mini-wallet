@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: radial-gradient(
+    theme("colors.gray.300") 0.5px,
+    transparent 0.5px
+  );
+  background-size: calc(10 * 0.5px) calc(10 * 0.5px);
+}
+
+.label {
+  @apply inline-flex items-center rounded-lg text-sm font-medium;
+}
+
+.input {
+  @apply w-full px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-gray-100 border-transparent rounded-lg text-gray-700 focus:border-gray-500 focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 disabled:opacity-40;
+}
+
+.btn {
+  @apply block w-full px-4 py-3 mt-4 font-semibold text-white transition duration-500 ease-in-out transform bg-gray-900 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 cursor-pointer disabled:opacity-50;
+}
+
+.btn:disabled,
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.skeleton {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: skeleton;
+  animation-timing-function: linear;
+
+  background: #f6f7f8;
+  background-image: -webkit-gradient(
+    linear,
+    left center,
+    right center,
+    from(#f6f7f8),
+    color-stop(0.2, #edeef1),
+    color-stop(0.4, #f6f7f8),
+    to(#f6f7f8)
+  );
+  background-image: -webkit-linear-gradient(
+    left,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-size: 980px 898px;
+  height: 898px;
+  position: relative;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -490px 0;
+  }
+  100% {
+    background-position: 490px 0;
+  }
+}
+
+@-moz-document url-prefix() {
+  header {
+    background: white;
+  }
+}
