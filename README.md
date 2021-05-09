@@ -1,6 +1,6 @@
 # Mini Wallet
 
-You can find a live instance of this project [here](https://mini-wallet.onrender.com/).
+You can find a live instance of this project [here](https://mini-wallet.vercel.app/).
 
 Follow the instruction below to run the project on localhost.
 Make sure to run `npm install` on respective directory before running any command.
